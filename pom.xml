@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.directv.bsa</groupId>
+	<groupId>com.shaunstone.bsa</groupId>
 	<artifactId>sqlstatscollector</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -13,7 +13,7 @@
 		<log4j.version>2.1</log4j.version>
 	</properties>
 	<repositories>
-		<!--other repositories if any <repository> <id>project.local</id> <name>project</name> <url>file:${project.basedir}/repo</url> 
+		<!--other repositories if any <repository> <id>project.local</id> <name>project</name> <url>file:${project.basedir}/repo</url>
 			</repository> -->
 	</repositories>
 
@@ -40,7 +40,7 @@
 					<appendAssemblyId>false</appendAssemblyId>
 					<archive>
 						<manifest>
-							<mainClass>com.directv.sql2metric.main.Launcher</mainClass>
+							<mainClass>com.shaunstone.sql2metric.main.Launcher</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -67,7 +67,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>com.directv.sql2metric.build.UpdateShellScript</mainClass>
+					<mainClass>com.shaunstone.sql2metric.build.UpdateShellScript</mainClass>
 					<arguments>
 						<argument>${project.build.directory}/Sql2Metric.jar</argument>
 						<argument>${basedir}/src/main/resources/sql2metric.sh</argument>
@@ -155,18 +155,18 @@
 		</dependency>
 
 		<!-- Binding for Log4J -->
-		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-slf4j-impl</artifactId> <version>${log4j.version}</version> 
-			</dependency> Log4j API and Core implementation required for binding <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-api</artifactId> 
-			<version>${log4j.version}</version> </dependency> <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-core</artifactId> 
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-slf4j-impl</artifactId> <version>${log4j.version}</version>
+			</dependency> Log4j API and Core implementation required for binding <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version> </dependency> <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-core</artifactId>
 			<version>${log4j.version}</version> </dependency> -->
 
 
-		<!-- JETTY <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-server</artifactId> <version>9.2.5.v20141112</version> 
-			</dependency> <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-servlet</artifactId> <version>9.2.5.v20141112</version> 
+		<!-- JETTY <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-server</artifactId> <version>9.2.5.v20141112</version>
+			</dependency> <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-servlet</artifactId> <version>9.2.5.v20141112</version>
 			</dependency> -->
-		<!-- for elastic search <dependency> <groupId>org.glassfish.jersey.core</groupId> <artifactId>jersey-client</artifactId> <version>2.13</version> 
-			</dependency> <dependency> <groupId>org.glassfish.jersey.media</groupId> <artifactId>jersey-media-json-jackson</artifactId> <version>2.6</version> 
-			<scope>compile</scope> </dependency> <dependency> <groupId>org.influxdb</groupId> <artifactId>influxdb-java</artifactId> <version>1.3</version> 
+		<!-- for elastic search <dependency> <groupId>org.glassfish.jersey.core</groupId> <artifactId>jersey-client</artifactId> <version>2.13</version>
+			</dependency> <dependency> <groupId>org.glassfish.jersey.media</groupId> <artifactId>jersey-media-json-jackson</artifactId> <version>2.6</version>
+			<scope>compile</scope> </dependency> <dependency> <groupId>org.influxdb</groupId> <artifactId>influxdb-java</artifactId> <version>1.3</version>
 			</dependency> <dependency> <groupId>com.timgroup</groupId> <artifactId>java-statsd-client</artifactId> <version>3.0.1</version> </dependency> -->
 
 		<!-- for log4j2 async <dependency> <groupId>com.lmax</groupId> <artifactId>disruptor</artifactId> <version>3.3.0</version> </dependency> -->

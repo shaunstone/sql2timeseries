@@ -26,12 +26,11 @@ AND parents.entity_guid    = me.parent_me_guid
 AND val.collection_time    between (sysdate - ${(System.currentTimeMillis() - lastRun)/86400000}) and (sysdate)"""
 
 
-86400000
-jdbcUrl = 'jdbc:oracle:thin:@10.13.81.102:1521/emrep.ds.dtvops.net'
+jdbcUrl = ''
 jdbcDriver = 'oracle.jdbc.driver.OracleDriver'
-pathForJar = 'jar:file:/users/srstone/workspacenewnew/sql2carbonorstatsd/src/test/resources/ojdbc11-11.2.0.3.jar!/'
-dbUser = 'sysman_ro'
-dbPassword = 'sysman_ro'
+pathForJar = 'jar:file:/users/workspacenewnew/sql2carbonorstatsd/src/test/resources/ojdbc11-11.2.0.3.jar!/'
+dbUser = ''
+dbPassword = ''
 /**
  * the date of the previous run will be passed to the script
  */
@@ -39,7 +38,7 @@ lastRun = new Date();
 
 
 
-mapping = [UPDA:".*UPDA.*",AuthenticationService:".*AS.*",DPS:".*DeviceProfileService.*",SharedService:".*Shared-Services.*"]
+mapping = []
 /**
  * this is a closure where a row will be passed in for your query
  */
